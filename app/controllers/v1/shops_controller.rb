@@ -1,7 +1,10 @@
 class V1::ShopsController < V1::BaseController
   def index
-    users = User.page(params[:page] || 1)
+    users = Shop.page(params[:page] || 1)
     render json: users, meta: pagination_meta(users)
+  end
+
+  def all_cars_in_shop(shopSeq)
   end
 
   private

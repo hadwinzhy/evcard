@@ -39,6 +39,8 @@ gem 'jwt' ## http://jwt.io for encoding/decoding token
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'faraday'
+
 #################### Development Gem ####################
 
 group :development, :test do

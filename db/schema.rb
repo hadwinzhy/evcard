@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212121442) do
+ActiveRecord::Schema.define(version: 20161212141318) do
 
   create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "shop_name"
     t.string  "address"
     t.integer "shop_seq"
+    t.string  "shop_desc"
+    t.integer "allow_stack_cnt"
     t.index ["shop_seq"], name: "index_shops_on_shop_seq", unique: true, using: :btree
   end
 
