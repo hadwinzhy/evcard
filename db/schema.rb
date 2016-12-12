@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019132945) do
+ActiveRecord::Schema.define(version: 20161212121442) do
+
+  create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "shop_name"
+    t.string  "address"
+    t.integer "shop_seq"
+    t.index ["shop_seq"], name: "index_shops_on_shop_seq", unique: true, using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",                          null: false
